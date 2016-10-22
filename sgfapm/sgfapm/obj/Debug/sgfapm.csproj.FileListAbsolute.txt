@@ -1,0 +1,9 @@
+c:\users\luis\documents\visual studio 2015\Projects\sgfapm\sgfapm\bin\Debug\sgfapm.exe.config
+c:\users\luis\documents\visual studio 2015\Projects\sgfapm\sgfapm\bin\Debug\sgfapm.exe
+c:\users\luis\documents\visual studio 2015\Projects\sgfapm\sgfapm\bin\Debug\sgfapm.pdb
+c:\users\luis\documents\visual studio 2015\Projects\sgfapm\sgfapm\obj\Debug\sgfapm.csprojResolveAssemblyReference.cache
+c:\users\luis\documents\visual studio 2015\Projects\sgfapm\sgfapm\obj\Debug\sgfapm.Form1.resources
+c:\users\luis\documents\visual studio 2015\Projects\sgfapm\sgfapm\obj\Debug\sgfapm.Properties.Resources.resources
+c:\users\luis\documents\visual studio 2015\Projects\sgfapm\sgfapm\obj\Debug\sgfapm.csproj.GenerateResource.Cache
+c:\users\luis\documents\visual studio 2015\Projects\sgfapm\sgfapm\obj\Debug\sgfapm.exe
+c:\users\luis\documents\visual studio 2015\Projects\sgfapm\sgfapm\obj\Debug\sgfapm.pdb
