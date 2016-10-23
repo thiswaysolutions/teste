@@ -95,7 +95,7 @@ namespace sgfapm
             funcionario._codigo = Convert.ToInt32(txtCodigo.Text);
             funcionario._nome = txtNome.Text;
             funcionario._cargo = txtCargo.Text;
-            funcionario._salario = Convert.ToDouble(mskSalario.Text);
+            funcionario._salario = Convert.ToDouble(mskSalario.Text.Trim('R', '$', ' '));
             funcionario._dataAdmissao = mskDataAdmissao.Text;
             funcionario._cpf = mskCPF.Text;
             funcionario._rg = mskRG.Text;
@@ -109,6 +109,9 @@ namespace sgfapm
             funcionario._bairro = txtBairro.Text;
             funcionario._cidade = txtCidade.Text;
             funcionario._estado = cboEstado.SelectedItem.ToString();
+            funcionario._usuario = txtUsuario.Text;
+            funcionario._senha = txtSenha.Text;
+            funcionario._perfil = cboPerfil.SelectedItem.ToString();
         }
     }
 }

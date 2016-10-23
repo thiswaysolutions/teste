@@ -25,25 +25,33 @@ namespace sgfapm
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            /*
-            // Cria um funcionario do tipo Usuario para autenticar
-            usuario = new Funcionario();
-            usuario._usuario = txtUsuario.Text;
-            usuario._senha = txtSenha.Text;
-
-            if (rf.autentica(usuario))
+            if (txtUsuario.Text.Equals("") || txtSenha.Text.Equals(""))
             {
-                FrmInicial inicio = new FrmInicial();
-                inicio.Show();
+                MessageBox.Show("Usuário ou senha inválidos!");
             }
             else
             {
-                MessageBox.Show("Usuario ou senha inválidos!");
-            }
-            */
+                // Cria um funcionario do tipo Usuario para autenticar
+                usuario = new Funcionario();
+                usuario._usuario = txtUsuario.Text;
+                usuario._senha = txtSenha.Text;
 
+                if (rf.autentica(usuario))
+                {
+                    FrmInicial inicio = new FrmInicial();
+                    inicio.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario ou senha inválidos!");
+                }
+            }
+            
+            
+            /*
             FrmInicial inicio = new FrmInicial();
             inicio.Show();
+            */
         }
     }
 }

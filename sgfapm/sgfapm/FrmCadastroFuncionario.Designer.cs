@@ -126,6 +126,7 @@
             this.mskTelefone.Name = "mskTelefone";
             this.mskTelefone.Size = new System.Drawing.Size(111, 22);
             this.mskTelefone.TabIndex = 15;
+            this.mskTelefone.Text = "1132165498";
             this.mskTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mskTelefone.Click += new System.EventHandler(this.mskTelefone_Click);
             // 
@@ -243,7 +244,6 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(89, 22);
             this.txtCodigo.TabIndex = 1;
-            this.txtCodigo.Text = "1";
             // 
             // label4
             // 
@@ -258,7 +258,7 @@
             // 
             this.mskSalario.Location = new System.Drawing.Point(697, 124);
             this.mskSalario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mskSalario.Mask = "$ 99999,99";
+            this.mskSalario.Mask = "$ 99999.99";
             this.mskSalario.Name = "mskSalario";
             this.mskSalario.Size = new System.Drawing.Size(104, 22);
             this.mskSalario.TabIndex = 4;
@@ -344,7 +344,7 @@
             "SE",
             "TO"});
             this.cboEstado.Location = new System.Drawing.Point(864, 299);
-            this.cboEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboEstado.Margin = new System.Windows.Forms.Padding(4);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(97, 24);
             this.cboEstado.TabIndex = 12;
@@ -357,6 +357,7 @@
             this.mskCelular.Name = "mskCelular";
             this.mskCelular.Size = new System.Drawing.Size(128, 22);
             this.mskCelular.TabIndex = 16;
+            this.mskCelular.Text = "11987654321";
             this.mskCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mskCelular.Click += new System.EventHandler(this.mskCelular_Click);
             // 
@@ -377,6 +378,7 @@
             this.mskRG.Name = "mskRG";
             this.mskRG.Size = new System.Drawing.Size(104, 22);
             this.mskRG.TabIndex = 14;
+            this.mskRG.Text = "012345678";
             this.mskRG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mskRG.Click += new System.EventHandler(this.mskRG_Click);
             // 
@@ -397,6 +399,7 @@
             this.mskCPF.Name = "mskCPF";
             this.mskCPF.Size = new System.Drawing.Size(121, 22);
             this.mskCPF.TabIndex = 13;
+            this.mskCPF.Text = "01234567890";
             this.mskCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mskCPF.Click += new System.EventHandler(this.mskCPF_Click);
             // 
@@ -438,6 +441,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(179, 22);
             this.txtUsuario.TabIndex = 17;
+            this.txtUsuario.Text = "user";
             // 
             // label9
             // 
@@ -453,8 +457,10 @@
             this.txtSenha.Location = new System.Drawing.Point(269, 485);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(179, 22);
             this.txtSenha.TabIndex = 18;
+            this.txtSenha.Text = "123456";
             // 
             // label10
             // 
@@ -473,7 +479,7 @@
             "Administrador",
             "Usuário"});
             this.cboPerfil.Location = new System.Drawing.Point(499, 484);
-            this.cboPerfil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboPerfil.Margin = new System.Windows.Forms.Padding(4);
             this.cboPerfil.Name = "cboPerfil";
             this.cboPerfil.Size = new System.Drawing.Size(179, 24);
             this.cboPerfil.TabIndex = 19;
@@ -485,6 +491,7 @@
             this.txtEMail.Name = "txtEMail";
             this.txtEMail.Size = new System.Drawing.Size(236, 22);
             this.txtEMail.TabIndex = 20;
+            this.txtEMail.Text = "email@email.com";
             // 
             // label11
             // 
