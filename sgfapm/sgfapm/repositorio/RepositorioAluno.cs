@@ -17,7 +17,7 @@ namespace sgfapm.repositorio
         public const String TABELA_DETALHE_ALUNO = "TB_DETALHES_ALUNO";
         public const String TABELA_ENDERECO_ALUNO = "TB_ENDERECO_ALUNO";
         public const String TABELA_ALUNO_CONTRIBUINTE = "TB_ALUNO_CONTRIBUINTE";
-        private const String COMANDO_BASE = " SELECT * FROM ";
+        private const String COMANDO_INSERT = "INSERT INTO ";
         private const String CONDICIONAL_WHERE = " WHERE ";
         private const String COLUNA_ID = "RA";
         private const String COLUNA_ID_FK = "RA_ALUNO";
@@ -40,14 +40,14 @@ namespace sgfapm.repositorio
             }
             catch(Exception e)
             {
-                MessageBox.Show("Falha ao salvar no banco de dados. \n Detalhes do Erro: " + e);
+                MessageBox.Show("Falha ao salvar aluno no banco de dados. \n Detalhes do Erro: " + e);
             }
             return false;
         }
 
         private void salvarTB_AlunoContribuinte(Aluno aluno)
         {
-            comando.CommandText = "INSERT INTO " + TABELA_ALUNO_CONTRIBUINTE +
+            comando.CommandText = COMANDO_INSERT + TABELA_ALUNO_CONTRIBUINTE +
                 " VALUES (" + aluno._ra + ", '" +
                 aluno._curso + "', '" +
                 aluno._periodo + "', '" +
@@ -55,29 +55,12 @@ namespace sgfapm.repositorio
                 aluno._armario +
                 ");";
 
-            // Desconectar do Banco para garantir e conectar novamente
-            comando.Connection = conexao.desconectarBD();
-            comando.Connection = conexao.conectarBD();
-
-            // Tenta executar o comando, se der erro mostra mensagem e no fim desconecta
-            try
-            {
-                comando.ExecuteNonQuery();
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-                //MessageBox.Show("Falha ao salvar no banco de dados. \n Detalhes do Erro: " + e);
-            }
-            finally
-            {
-                conexao.desconectarBD();
-            }
+            executar(comando);
         }
 
         private void salvarTB_EnderecoAluno(Aluno aluno)
         {
-            comando.CommandText = "INSERT INTO " + TABELA_ENDERECO_ALUNO +
+            comando.CommandText = COMANDO_INSERT + TABELA_ENDERECO_ALUNO +
                 " VALUES (" + aluno._ra + ", '" +
                 aluno._rua + "', '" +
                 aluno._numero+ "', '" +
@@ -88,29 +71,12 @@ namespace sgfapm.repositorio
                 aluno._estado +
                 "');";
 
-            // Desconectar do Banco para garantir e conectar novamente
-            comando.Connection = conexao.desconectarBD();
-            comando.Connection = conexao.conectarBD();
-
-            // Tenta executar o comando, se der erro mostra mensagem e no fim desconecta
-            try
-            {
-                comando.ExecuteNonQuery();
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-                //MessageBox.Show("Falha ao salvar no banco de dados. \n Detalhes do Erro: " + e);
-            }
-            finally
-            {
-                conexao.desconectarBD();
-            }
+            executar(comando);
         }
 
         private void salvarTB_DetalhesAluno(Aluno aluno)
         {
-            comando.CommandText = "INSERT INTO " + TABELA_DETALHE_ALUNO +
+            comando.CommandText = COMANDO_INSERT + TABELA_DETALHE_ALUNO +
                 " VALUES (" + aluno._ra + ", " +
                 aluno._idade + ", '" +
                 aluno._telefone + "', '" +
@@ -118,33 +84,21 @@ namespace sgfapm.repositorio
                 aluno._eMail +
                 "');";
 
-            // Desconectar do Banco para garantir e conectar novamente
-            comando.Connection = conexao.desconectarBD();
-            comando.Connection = conexao.conectarBD();
-
-            // Tenta executar o comando, se der erro mostra mensagem e no fim desconecta
-            try
-            {
-                comando.ExecuteNonQuery();
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-                //MessageBox.Show("Falha ao salvar no banco de dados. \n Detalhes do Erro: " + e);
-            }
-            finally
-            {
-                conexao.desconectarBD();
-            }
+            executar(comando);
         }
 
         private void salvarTB_Alunos(Aluno aluno)
         {
-            comando.CommandText = "INSERT INTO " + TABELA_ALUNOS +
+            comando.CommandText = COMANDO_INSERT + TABELA_ALUNOS +
                 " VALUES (" + aluno._ra + ", '" +
                 aluno._nome + "', " +
                 aluno._contribuinte + ");";
 
+            executar(comando);
+        }
+
+        private void executar(SqlCommand comando)
+        {
             // Desconectar do Banco para garantir e conectar novamente
             comando.Connection = conexao.desconectarBD();
             comando.Connection = conexao.conectarBD();

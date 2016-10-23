@@ -1,4 +1,7 @@
-﻿using System;
+﻿using sgfapm.dominio;
+using sgfapm.repositorio;
+using sgfapm.utilitario;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +15,11 @@ namespace sgfapm
 {
     public partial class FrmCadastroFuncionario : Form
     {
+        // Declara e instancia os objetos globais
+        Conexao conexao = new Conexao();
+        Funcionario funcionario;
+        RepositorioFuncionario rf = new RepositorioFuncionario();
+
         public FrmCadastroFuncionario()
         {
             InitializeComponent();
@@ -63,6 +71,44 @@ namespace sgfapm
         {
             // Posiciona o cursor no inicio do componente
             componente.SelectionStart = posicao;
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            // Cria um objeto do tipo Aluno e preenche seus atributos com as informações da tela
+            funcionario = new Funcionario();
+            setFuncionario();
+
+            // O metodo retorna true ou false, de acordo com o valor mostra uma mensagem
+            if (rf.salvar(funcionario))
+            {
+                MessageBox.Show("Funcionário cadastrado!");
+            }
+            else
+            {
+                MessageBox.Show("Funcionário não cadastrado!");
+            }
+        }
+
+        private void setFuncionario()
+        {
+            funcionario._codigo = Convert.ToInt32(txtCodigo.Text);
+            funcionario._nome = txtNome.Text;
+            funcionario._cargo = txtCargo.Text;
+            funcionario._salario = Convert.ToDouble(mskSalario.Text);
+            funcionario._dataAdmissao = mskDataAdmissao.Text;
+            funcionario._cpf = mskCPF.Text;
+            funcionario._rg = mskRG.Text;
+            funcionario._telefone = mskTelefone.Text;
+            funcionario._celular = mskCelular.Text;
+            funcionario._eMail = txtEMail.Text;
+            funcionario._rua = txtEndereco.Text;
+            funcionario._numero = txtNumero.Text;
+            funcionario._complemento = txtComplemento.Text;
+            funcionario._cep = mskCEP.Text;
+            funcionario._bairro = txtBairro.Text;
+            funcionario._cidade = txtCidade.Text;
+            funcionario._estado = cboEstado.SelectedItem.ToString();
         }
     }
 }

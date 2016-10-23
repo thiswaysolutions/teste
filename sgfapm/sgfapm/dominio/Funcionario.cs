@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace sgfapm.dominio
 {
-    class Funcionario
+    // Funcionario implementa a interface de Usuario e pode ser autenticado
+    class Funcionario : iUsuario
     {
         // Propriedades
         private int codigo;
@@ -79,6 +80,12 @@ namespace sgfapm.dominio
             set { telefone = value; }
         }
 
+        public String _celular
+        {
+            get { return celular; }
+            set { celular = value; }
+        }
+
         public String _eMail
         {
             get { return eMail; }
@@ -127,12 +134,14 @@ namespace sgfapm.dominio
             set { estado = value; }
         }
 
+        // @Override
         public String _usuario
         {
             get { return usuario; }
             set { usuario = value; }
         }
 
+        // @Override
         public String _senha
         {
             get { return senha; }
