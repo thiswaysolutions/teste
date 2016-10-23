@@ -7,3 +7,15 @@ c:\users\luis\documents\visual studio 2015\Projects\sgfapm\sgfapm\obj\Debug\sgfa
 c:\users\luis\documents\visual studio 2015\Projects\sgfapm\sgfapm\obj\Debug\sgfapm.csproj.GenerateResource.Cache
 c:\users\luis\documents\visual studio 2015\Projects\sgfapm\sgfapm\obj\Debug\sgfapm.exe
 c:\users\luis\documents\visual studio 2015\Projects\sgfapm\sgfapm\obj\Debug\sgfapm.pdb
+G:\projetos\tcm\trunk\sgfapm\sgfapm\bin\Debug\sgfapm.exe.config
+G:\projetos\tcm\trunk\sgfapm\sgfapm\obj\Debug\sgfapm.exe
+G:\projetos\tcm\trunk\sgfapm\sgfapm\obj\Debug\sgfapm.pdb
+G:\projetos\tcm\trunk\sgfapm\sgfapm\bin\Debug\sgfapm.exe
+G:\projetos\tcm\trunk\sgfapm\sgfapm\bin\Debug\sgfapm.pdb
+G:\projetos\tcm\trunk\sgfapm\sgfapm\obj\Debug\sgfapm.csprojResolveAssemblyReference.cache
+G:\projetos\tcm\trunk\sgfapm\sgfapm\obj\Debug\sgfapm.FrmInicial.resources
+G:\projetos\tcm\trunk\sgfapm\sgfapm\obj\Debug\sgfapm.Properties.Resources.resources
+G:\projetos\tcm\trunk\sgfapm\sgfapm\obj\Debug\sgfapm.csproj.GenerateResource.Cache
+G:\projetos\tcm\trunk\sgfapm\sgfapm\obj\Debug\sgfapm.FrmLogin.resources
+G:\projetos\tcm\trunk\sgfapm\sgfapm\obj\Debug\sgfapm.FrmCadastroAluno.resources
+G:\projetos\tcm\trunk\sgfapm\sgfapm\obj\Debug\sgfapm.FrmCadastroFuncionario.resources
