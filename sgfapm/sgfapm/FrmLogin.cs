@@ -25,6 +25,7 @@ namespace sgfapm
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            /*
             if (txtUsuario.Text.Equals("") || txtSenha.Text.Equals(""))
             {
                 MessageBox.Show("Usuário ou senha inválidos!");
@@ -46,12 +47,12 @@ namespace sgfapm
                     MessageBox.Show("Usuario ou senha inválidos!");
                 }
             }
+            */
             
             
-            /*
             FrmInicial inicio = new FrmInicial();
             inicio.Show();
-            */
+            
         }
     }
 }

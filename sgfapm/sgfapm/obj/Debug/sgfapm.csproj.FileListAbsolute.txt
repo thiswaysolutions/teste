@@ -19,3 +19,5 @@ G:\projetos\tcm\trunk\sgfapm\sgfapm\obj\Debug\sgfapm.csproj.GenerateResource.Cac
 G:\projetos\tcm\trunk\sgfapm\sgfapm\obj\Debug\sgfapm.FrmLogin.resources
 G:\projetos\tcm\trunk\sgfapm\sgfapm\obj\Debug\sgfapm.FrmCadastroAluno.resources
 G:\projetos\tcm\trunk\sgfapm\sgfapm\obj\Debug\sgfapm.FrmCadastroFuncionario.resources
+G:\projetos\tcm\trunk\sgfapm\sgfapm\bin\Debug\bd\DB_SGFAPM.mdf
+G:\projetos\tcm\trunk\sgfapm\sgfapm\bin\Debug\bd\DB_SGFAPM_log.ldf
