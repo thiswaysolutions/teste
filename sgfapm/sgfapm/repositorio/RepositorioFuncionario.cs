@@ -21,7 +21,7 @@ namespace sgfapm.repositorio
         private const String CONDICIONAL_WHERE = " WHERE ";
         private const String COLUNA_ID = " CODIGO ";
         private const String COLUNA_ID_FK = " COD_FUNCIONARIO ";
-        private const String COMANDO_SELECT = " SELECT USUARIO, SENHA FROM ";
+        private const String COMANDO_SELECT = " SELECT * FROM ";
 
         // Instancia de conexao com o Banco de Dados
         Conexao conexao = new Conexao();
@@ -118,23 +118,32 @@ namespace sgfapm.repositorio
             }
         }
 
-        // nao esta funcionando
         public bool autentica(iUsuario func)
         {
+            String usuario;
+            String senha;
+
             comando.CommandText = COMANDO_SELECT + TABELA_USUARIOS +
                 CONDICIONAL_WHERE + " USUARIO = '" + func._usuario + "'";
+
+            SqlDataReader dr;
             try
-            {
-                
+            {                
                 comando.Connection = conexao.desconectarBD();
                 comando.Connection = conexao.conectarBD();
 
-                SqlDataReader dr = comando.ExecuteReader();
-                MessageBox.Show(dr["USUARIO"].ToString() + " " + dr["SENHA"].ToString());
-                if ((dr["USUARIO"].ToString().Equals(func._usuario) && (dr["SENHA"].ToString().Equals(func._senha))))
+                dr = comando.ExecuteReader();
+                if (dr.Read())
                 {
-                    return true;
+                    usuario = dr.GetValue(1).ToString();
+                    senha = dr.GetValue(2).ToString();
+
+                    if ((usuario.Equals(func._usuario) && senha.Equals(func._senha)))
+                    {
+                        return true;
+                    }
                 }
+                dr.Close();
             }
             catch (Exception e)
             {

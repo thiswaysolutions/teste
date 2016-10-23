@@ -13,7 +13,7 @@ namespace sgfapm.utilitario
     {
         //String de conexão
         SqlConnection conexao =
-            new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\bd\\DB_SGFAPM.mdf;Integrated Security=True");
+            new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\DB_SGFAPM.mdf;Integrated Security=True");
 
         // Método de conexão do banco de dados
         public SqlConnection conectarBD()

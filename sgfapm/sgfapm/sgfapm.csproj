@@ -135,10 +135,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="bd\DB_SGFAPM.mdf">
+    <Content Include="DB_SGFAPM.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="bd\DB_SGFAPM_log.ldf">
+    <Content Include="DB_SGFAPM_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DB_SGFAPM.mdf</DependentUpon>
     </Content>
